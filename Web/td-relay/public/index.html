@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>TD Controller</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  This file is only the skeleton of the page. The controls (colors, sliders, buttons...) are
+  created from config.js, so to add or remove a control you normally edit config.js only.
+  Everything inside the elements below is filled in by app.js.
+-->
+<main>
+  <h1>TD Controller</h1>
+
+  <div id="topButtons" class="topbuttons"></div>   <!-- big buttons, e.g. PULSE ALL -->
+  <section id="settings"></section>                <!-- switches and settings shared by all lights -->
+  <div id="lights" class="lights"></div>          <!-- one card per light -->
+
+  <section>
+    <div id="status"><span id="dot"></span><span id="statusText">connecting…</span></div>
+    <label>Server: relay URL (wss://…) or host:port on your local network
+      <input type="text" id="host" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false"
+             placeholder="wss://td-relay.yourname.workers.dev/r">
+    </label>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

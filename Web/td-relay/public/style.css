@@ -1,0 +1,51 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 16px; font: 16px/1.4 system-ui, sans-serif; background: #161616; color: #eee; }
+main { max-width: 680px; margin: 0 auto; display: grid; gap: 14px; }
+h1 { font-size: 18px; margin: 0; }
+section { background: #232323; border-radius: 12px; padding: 14px; display: grid; gap: 14px; }
+label { display: grid; gap: 6px; font-size: 14px; color: #bbb; }
+[hidden] { display: none !important; }
+
+input[type=color] { width: 100%; height: 48px; padding: 0; border: 0; border-radius: 8px; background: none; }
+input[type=text] { width: 100%; height: 44px; padding: 0 10px; border-radius: 8px; border: 1px solid #444; background: #111; color: #eee; font-size: 16px; }
+input[type=range] { width: 100%; height: 38px; }
+
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.val { font-variant-numeric: tabular-nums; color: #eee; }
+.caption { font-size: 13px; color: #999; margin-bottom: 6px; }
+.mini { font-size: 13px; }
+.mini input[type=range] { height: 32px; }
+
+/* colors : grid of pickers */
+.colors { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* lights */
+.lights { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 600px) { .lights { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+.light { border: 1px solid #333; }
+.light .buttons { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* on/off switch */
+.toggle { display: flex; align-items: center; gap: 12px; font-size: 16px; color: #eee; min-height: 40px; }
+.toggle input { width: 26px; height: 26px; }
+
+/* choice / two-way switch */
+.seg { display: grid; gap: 6px; }
+.seg label { position: relative; display: block; }
+.seg input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+.seg span { display: block; text-align: center; padding: 12px 8px; border-radius: 10px; background: #2d2d2d; color: #ccc; font-size: 15px; }
+.seg input:checked + span { background: #3a7bd5; color: #fff; font-weight: 600; }
+.seg input:focus-visible + span { outline: 2px solid #fff; }
+
+/* buttons */
+.topbuttons { display: grid; gap: 10px; }
+button.pulse { border: 0; border-radius: 14px; background: #3a7bd5; color: #fff; font-weight: 700;
+               touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+button.pulse.big { height: 84px; font-size: 22px; }
+button.pulse.small { height: 44px; padding: 0 22px; font-size: 15px; border-radius: 10px; }
+button.pulse.hit { background: #7fb3ff; }
+
+/* connection status */
+#status { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #bbb; }
+#dot { width: 12px; height: 12px; border-radius: 50%; background: #c90; flex: none; }
