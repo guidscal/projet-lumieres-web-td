@@ -16,7 +16,8 @@ const CONFIG = {
 
   // ---- big buttons at the top of the page. They fire for ALL lights at once ------------
   topButtons: [
-    { id: 'pulse', label: 'PULSE NOW' },
+    { id: 'pulserandom', label: 'PULSE RANDOM' },
+    { id: 'pulse', label: 'PULSE ALL' },
     { id: 'vibechangenow', label: 'CHANGE COLORS NOW' },
     //{ id: 'blackout', label: 'BLACKOUT' },          // <- remove the // to add another button
   ],
@@ -39,7 +40,7 @@ const CONFIG = {
       modeSwitch: { id: 'colormode', labels: ['4 colors per light', '1 color per light'] } },
 
     // A button on each light's card.
-    //{ type: 'button', id: 'pulse', label: 'PULSE' },
+    { type: 'button', id: 'pulsesingle', label: 'PULSE' },
 
     // More examples (remove the // to try them):
     { type: 'slider', id: 'bright', label: 'Brightness', min: 0, max: 1, step: 0.01, default: 1, shared: {} },
